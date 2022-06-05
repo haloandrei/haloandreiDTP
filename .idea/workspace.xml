@@ -1,60 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b01f7b5-1e11-4c4e-8491-3f6a7c0900cb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.buckconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.bundle/config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.flowconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.ruby-version" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.watchmanconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__tests__/App-test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Card.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/DataBase.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/FlexWrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Main/Arc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Main/BackButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Main/BackgroundSVG.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Main/Circle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Main/DayProgressDisplay.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Main/FadeOutView.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Main/GoalApp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Main/GoalInput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Main/GoalItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Main/GuessingApp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Main/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Main/Input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Main/Item.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Main/NumberContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Main/RenderItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Main/Sector.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Main/SideMenu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Main/SpecificTask.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Main/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/SvgLoader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/constants/color.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/haloandreiDTP.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/metro.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/AddTaskScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/GameOverScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/GameScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/ScheduleTasksScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/StartGameScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/TaskListScreen.js" afterDir="false" />
+    <list default="true" id="8b01f7b5-1e11-4c4e-8491-3f6a7c0900cb" name="Changes" comment="feat: created git">
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +23,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2A9P1wGxy9ydqtgBeRGvnNaIT90" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -85,6 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/work/Coding/ReactNative/haloandreiDTP",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -92,6 +48,11 @@
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\work\Coding\ReactNative\haloandreiDTP" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -101,8 +62,16 @@
       <option name="presentableId" value="Default" />
       <updated>1654418619691</updated>
       <workItem from="1654418621566" duration="277000" />
-      <workItem from="1654419259364" duration="584000" />
+      <workItem from="1654419259364" duration="1149000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: created git">
+      <created>1654419942934</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1654419942934</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,5 +90,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="feat: created git" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: created git" />
   </component>
 </project>
