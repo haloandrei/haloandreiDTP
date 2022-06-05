@@ -115,7 +115,7 @@ const App: () => Node = () => {
     if (dateNow!==date && date!==null){
       DB.current.storeDate(dateNow);
       DB.current.archiveTasks();
-      DB.current.delCurrentTasks();
+      DB.current.delCurrentTasks().then(r => DB.current.getTasks(setTasks));
     }
     if (dateNow===date){
       DB.current.getTasks(setTasks);

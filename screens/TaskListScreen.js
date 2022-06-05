@@ -39,6 +39,24 @@ const TaskListScreen = props => {
         //props.DB.delTask(tasks[pos],setTasks)
     } ;
 
+
+
+    const splitTask = (itemId) => {
+        if (props.schedule !== true){
+            var newTasks = props.tasks.map((x)=>x);
+            var pos = newTasks.findIndex(x => x.id === itemId);
+            newTasks[pos].amount = newTasks[pos].amount / 2;
+            newTasks[pos].etime = newTasks[pos].etime / 2;
+            let newTask = JSON.parse(JSON.stringify(newTasks[pos]));
+            newTask.id = new Date().toLocaleString();
+            newTasks.splice(pos,0,newTask);
+            props.setTasks(newTasks);
+            props.DB.setTasks(newTasks);
+
+        }
+        //props.DB.delTask(tasks[pos],setTasks)
+    } ;
+
     let addButton = <></>
     if (props.addButton === true) {
         addButton =<TouchableOpacity style={styles.floatButton} onPress={props.addTaskHandler}>
@@ -50,7 +68,7 @@ const TaskListScreen = props => {
             <FlatList
                 data={props.tasks}
                 numColumns={3}
-                renderItem={({item}) => renderItem({item,setSelectedHandler})}
+                renderItem={({item}) => renderItem({item,setSelectedHandler, splitTask})}
                 scrollEnabled={true}
             >
             </FlatList>

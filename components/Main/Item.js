@@ -3,9 +3,9 @@ import React from "react";
 import FadeOutView from "./FadeOutView";
 import BackgroundSVG from "./BackgroundSVG";
 
-const Item = ({ item, onPress, backgroundColor, textColor}) => {
+const Item = ({ item, onPress, onLongPress, backgroundColor, textColor}) => {
     return !item.done ?
-        <TouchableOpacity onPress={onPress} style={[styles.roundButton1, backgroundColor]}>
+        <TouchableOpacity onLongPress={onLongPress} onPress={onPress} style={[styles.roundButton1, backgroundColor]}>
 
                 <BackgroundSVG uri={item.logoUri} xml={item.logoXML}/>
                 <Text style={[styles.buttonTextPosition, styles.amount, textColor]} adjustsFontSizeToFit numberOfLines={1}>{item.amount}</Text>
