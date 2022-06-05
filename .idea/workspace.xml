@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b01f7b5-1e11-4c4e-8491-3f6a7c0900cb" name="Changes" comment="feat: created git">
-      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+    <list default="true" id="8b01f7b5-1e11-4c4e-8491-3f6a7c0900cb" name="Changes" comment="feat: added readme.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1654418619691</updated>
       <workItem from="1654418621566" duration="277000" />
-      <workItem from="1654419259364" duration="1149000" />
+      <workItem from="1654419259364" duration="2371000" />
     </task>
     <task id="LOCAL-00001" summary="feat: created git">
       <created>1654419942934</created>
@@ -71,7 +71,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654419942934</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: added readme.md">
+      <created>1654420522237</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1654420522237</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,6 +98,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="feat: created git" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: created git" />
+    <MESSAGE value="feat: added readme.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: added readme.md" />
   </component>
 </project>
