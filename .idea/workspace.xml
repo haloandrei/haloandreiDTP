@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b01f7b5-1e11-4c4e-8491-3f6a7c0900cb" name="Changes" comment="feat: backHandler for main screen">
+    <list default="true" id="8b01f7b5-1e11-4c4e-8491-3f6a7c0900cb" name="Changes" comment="feat: split task in half by long pressing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Main/Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Main/Item.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Main/RenderItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Main/RenderItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/TaskListScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/TaskListScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/AddTaskScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/AddTaskScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,20 +36,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/work/Coding/ReactNative/haloandreiDTP",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/work/Coding/ReactNative/haloandreiDTP&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\work\Coding\ReactNative\haloandreiDTP" />
@@ -65,7 +64,10 @@
       <option name="presentableId" value="Default" />
       <updated>1654418619691</updated>
       <workItem from="1654418621566" duration="277000" />
-      <workItem from="1654419259364" duration="3919000" />
+      <workItem from="1654419259364" duration="8189000" />
+      <workItem from="1654807125954" duration="114000" />
+      <workItem from="1654813920653" duration="1014000" />
+      <workItem from="1654936190797" duration="1746000" />
     </task>
     <task id="LOCAL-00001" summary="feat: created git">
       <created>1654419942934</created>
@@ -88,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654421698594</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: split task in half by long pressing">
+      <created>1654423307645</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1654423307645</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +119,7 @@
     <MESSAGE value="feat: created git" />
     <MESSAGE value="feat: added readme.md" />
     <MESSAGE value="feat: backHandler for main screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: backHandler for main screen" />
+    <MESSAGE value="feat: split task in half by long pressing" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: split task in half by long pressing" />
   </component>
 </project>

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {AsyncStorage, Button, Keyboard, StyleSheet, Text, TouchableWithoutFeedback, View} from "react-native";
 import Card from "../components/Card";
 import Input from "../components/Main/Input";
@@ -14,10 +14,20 @@ const AddTaskScreen = props =>{
     const [logoUri,setLogoUri] = useState("");
     const [logoXML,setLogoXML] = useState("");
     const [timeAlert,setTimeAlert] = useState(<></>);
+    const [usesMin,setUsesMin] = useState(true);
+    const [etaTag,setEtaTag] = useState(<View><Text style={styles.text}>Specify Time Estimate (min)</Text>
+        <View style={styles.textInputContainer}>
+            <Input blurOnSubmit autoCapitalize="none" autoCorrect={false} style={styles.input} onChangeText={timeHandlerText} value={timeEstimate}/>
+        </View></View>);
     const inputHandlerText = inputText =>{
             inputText = inputText.toString();
+        console.log(inputText);
+            if (inputText === "min")
+                setUsesMin(true);
+            else setUsesMin(false);
         setEnteredValue(inputText);
     };
+
     const quantityHandlerText = inputText =>{
 
         inputText = inputText.toString();
@@ -81,6 +91,17 @@ const AddTaskScreen = props =>{
         }
     }
 
+
+
+    useEffect(()=>{
+        if (usesMin === false) setEtaTag(<View><Text style={styles.text}>Specify Time Estimate (min)</Text>
+            <View style={styles.textInputContainer}>
+                <Input blurOnSubmit autoCapitalize="none" autoCorrect={false} style={styles.input} onChangeText={timeHandlerText} value={timeEstimate}/>
+            </View></View>);
+        else setEtaTag(<></>);
+    },[usesMin]);
+
+
     return  <Card>
                 <Text style={styles.text}>Units of Measure</Text>
                 <View style={styles.textInputContainer}>
@@ -92,10 +113,7 @@ const AddTaskScreen = props =>{
                 </View>
                 <Text style={styles.text}>Free Time remaining: {timeLeft.toString()}</Text>
                 {timeAlert}
-                <Text style={styles.text}>Specify Time Estimate (min)</Text>
-                <View style={styles.textInputContainer}>
-                    <Input blurOnSubmit autoCapitalize="none" autoCorrect={false} style={styles.input} onChangeText={timeHandlerText} value={timeEstimate}/>
-                </View>
+                {etaTag}
                 <View style={styles.buttonInputs}>
                     <View style={styles.button} >
                         <Button style={styles.button} title={"Select Logo"} onPress={openDocumentFile} color={Colors.neutral}/>

@@ -27,9 +27,9 @@ TODO
 - add task limit to time available in the day
 - ~~create a menu nav bar where you can add recursive tasks~~
 - make the add task menu more user friendly
-- long press task splits it in two.
+- ~~long press task splits it in two.~~
 - make animation for split
-- add task menu: make auto min checker to fill estimate time if the unit of measure is in min otherwise make the estimate time appear.
+- ~~add task menu: make auto min checker to fill estimate time if the unit of measure is in min otherwise make the estimate time appear.~~
 - add task menu: preloaded icons to be showed as options in a recyle list.
 - ~~change xml preprocessing to happen in add task menu~~
 - add task menu: change icon picker to have png options not just svg as svg xml conversions get expensive.
