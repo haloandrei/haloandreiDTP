@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b01f7b5-1e11-4c4e-8491-3f6a7c0900cb" name="Changes" comment="feat: split task in half by long pressing">
+    <list default="true" id="8b01f7b5-1e11-4c4e-8491-3f6a7c0900cb" name="Changes" comment="feat: unit of measure checker to make estimated time entry appear when another unit is used other than minutes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/AddTaskScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/AddTaskScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +65,7 @@
       <workItem from="1654419259364" duration="8189000" />
       <workItem from="1654807125954" duration="114000" />
       <workItem from="1654813920653" duration="1014000" />
-      <workItem from="1654936190797" duration="1746000" />
+      <workItem from="1654936190797" duration="2277000" />
     </task>
     <task id="LOCAL-00001" summary="feat: created git">
       <created>1654419942934</created>
@@ -97,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654423307645</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: unit of measure checker to make estimated time entry appear when another unit is used other than minutes">
+      <created>1654938259125</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1654938259125</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,6 +125,7 @@
     <MESSAGE value="feat: added readme.md" />
     <MESSAGE value="feat: backHandler for main screen" />
     <MESSAGE value="feat: split task in half by long pressing" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: split task in half by long pressing" />
+    <MESSAGE value="feat: unit of measure checker to make estimated time entry appear when another unit is used other than minutes" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: unit of measure checker to make estimated time entry appear when another unit is used other than minutes" />
   </component>
 </project>

@@ -94,7 +94,7 @@ const AddTaskScreen = props =>{
 
 
     useEffect(()=>{
-        if (usesMin === false) setEtaTag(<View><Text style={styles.text}>Specify Time Estimate (min)</Text>
+        if (usesMin === false) setEtaTag(<View style={styles.textInputContainer}><Text style={styles.text}>Specify Time Estimate (min)</Text>
             <View style={styles.textInputContainer}>
                 <Input blurOnSubmit autoCapitalize="none" autoCorrect={false} style={styles.input} onChangeText={timeHandlerText} value={timeEstimate}/>
             </View></View>);
@@ -138,6 +138,7 @@ const styles = StyleSheet.create({
       color:color.fail,
     },
     textInputContainer:{
+        minWidth:300,
         justifyContent:"center",
         alignItems:"center",
         width:'80%',
