@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b01f7b5-1e11-4c4e-8491-3f6a7c0900cb" name="Changes" comment="feat: unit of measure checker to make estimated time entry appear when another unit is used other than minutes">
+    <list default="true" id="8b01f7b5-1e11-4c4e-8491-3f6a7c0900cb" name="Changes" comment="fix: Time Estimate is rendering properly now">
+      <change afterPath="$PROJECT_DIR$/screens/EditTasksScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Main/BackgroundSVG.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Main/BackgroundImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Main/Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Main/Item.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/AddTaskScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/AddTaskScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -34,23 +39,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/work/Coding/ReactNative/haloandreiDTP&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/work/Coding/ReactNative/haloandreiDTP",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\haloa\\AppData\\Local\\JetBrains\\Toolbox\\apps\\IDEA-U\\ch-0\\221.5787.30\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\work\Coding\ReactNative\haloandreiDTP" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\work\Coding\ReactNative\haloandreiDTP\screens" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -65,7 +74,8 @@
       <workItem from="1654419259364" duration="8189000" />
       <workItem from="1654807125954" duration="114000" />
       <workItem from="1654813920653" duration="1014000" />
-      <workItem from="1654936190797" duration="2277000" />
+      <workItem from="1654936190797" duration="8152000" />
+      <workItem from="1654949085710" duration="10522000" />
     </task>
     <task id="LOCAL-00001" summary="feat: created git">
       <created>1654419942934</created>
@@ -102,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654938259125</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix: Time Estimate is rendering properly now">
+      <created>1654938683898</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1654938683898</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +143,7 @@
     <MESSAGE value="feat: backHandler for main screen" />
     <MESSAGE value="feat: split task in half by long pressing" />
     <MESSAGE value="feat: unit of measure checker to make estimated time entry appear when another unit is used other than minutes" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: unit of measure checker to make estimated time entry appear when another unit is used other than minutes" />
+    <MESSAGE value="fix: Time Estimate is rendering properly now" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Time Estimate is rendering properly now" />
   </component>
 </project>

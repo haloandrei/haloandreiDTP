@@ -1,11 +1,15 @@
 import React, {useEffect, useState} from "react";
-import {AsyncStorage, Button, Keyboard, StyleSheet, Text, TouchableWithoutFeedback, View} from "react-native";
+import {AsyncStorage, Button, Keyboard, Platform, StyleSheet, Text, TouchableWithoutFeedback, View} from "react-native";
 import Card from "../components/Card";
 import Input from "../components/Main/Input";
 import Colors from "../constants/color";
 import * as RNFS from 'react-native-fs';
 import * as DocumentPicker from "react-native-document-picker";
 import color from "../constants/color";
+import {re} from "@babel/core/lib/vendor/import-meta-resolve";
+
+const getPlatformURI = path =>
+    Platform.OS === "ios" ? path : `file://${path}`;
 
 const AddTaskScreen = props =>{
     const [enteredValue, setEnteredValue] = useState("min");
@@ -13,6 +17,7 @@ const AddTaskScreen = props =>{
     const [timeEstimate,setTmeEstimate] = useState("10");
     const [logoUri,setLogoUri] = useState("");
     const [logoXML,setLogoXML] = useState("");
+    const [logoType,setLogoType] = useState("");
     const [timeAlert,setTimeAlert] = useState(<></>);
     const [usesMin,setUsesMin] = useState(true);
     const [etaTag,setEtaTag] = useState(<View><Text style={styles.text}>Specify Time Estimate (min)</Text>
@@ -21,7 +26,6 @@ const AddTaskScreen = props =>{
         </View></View>);
     const inputHandlerText = inputText =>{
             inputText = inputText.toString();
-        console.log(inputText);
             if (inputText === "min")
                 setUsesMin(true);
             else setUsesMin(false);
@@ -58,7 +62,7 @@ const AddTaskScreen = props =>{
     }
 
     const confirmInputHandler = () =>{
-        let newTask = {amount: quantity, task: enteredValue, etime: timeEstimate, done: false, logoUri: logoUri, logoXML: logoXML, id: getId()};
+        let newTask = {amount: quantity, task: enteredValue, etime: timeEstimate, done: false, logoUri: logoUri, logoType:logoType, logoXML: logoXML, id: getId()};
         props.setTasks([...props.tasks,newTask])
         props.DB.storeTask(newTask,props.doneHandler);
     }
@@ -67,19 +71,41 @@ const AddTaskScreen = props =>{
         try {
 
             const result = await DocumentPicker.pickSingle({
-                type: [DocumentPicker.types.allFiles]
+                type: [DocumentPicker.types.images]
             })
-            setLogoUri(result.uri);
-            RNFS.readFile(result.uri, 'ascii').then(res => {
-                let xml = res.replace(/<path /g,"<path style=\"fill:#000000;\" ");
-                xml = xml.replace(/circle/g,"circle style=\"fill:#000000;\" ");
-                if (xml.includes("stroke")) xml = xml.replace(/style="fill:#000000;" /g,"");
+            const newPath = `${RNFS.DocumentDirectoryPath}/Image.jpg`;
+            const finalPath = getPlatformURI(newPath);
 
-                setLogoXML(xml);
-            })
-                .catch(err => {
-                    console.log(err.message, err.code);
-                });
+            RNFS.readDir(RNFS.DocumentDirectoryPath).then(res2 => {
+
+                const outputImage = result.uri
+
+                RNFS.copyFile(outputImage, newPath)
+                    .then(() => {
+                        RNFS.exists(finalPath).then(() => {
+                            setLogoUri(finalPath);
+                        })
+                            .catch(err => console.log(err));
+                    })
+                    .catch(err => console.log(err));
+
+                }).catch(err => console.log(err));
+
+            if (result.type === "image/svg+xml"){
+                RNFS.readFile(finalPath, 'ascii').then(res => {
+                    let xml = res.replace(/<path /g,"<path style=\"fill:#000000;\" ");
+                    xml = xml.replace(/circle/g,"circle style=\"fill:#000000;\" ");
+                    if (xml.includes("stroke")) xml = xml.replace(/style="fill:#000000;" /g,"");
+                    setLogoType("svg");
+                    setLogoXML(xml);
+                })
+                    .catch(err => {
+                        console.log(err.message, err.code);
+                    });
+            }
+            else if(result.type === "image/png" || result.type === "image/bmp" || result.type === "image/jpg" || result.type === "image/jpeg" || result.type === "image/gif" || result.type === "image/webp"){
+                setLogoType("img");
+            }
         } catch (e) {
             if (DocumentPicker.isCancel(e)){
                 //exist dialog if needed

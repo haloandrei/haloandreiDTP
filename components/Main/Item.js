@@ -1,13 +1,13 @@
 import {StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import React from "react";
 import FadeOutView from "./FadeOutView";
-import BackgroundSVG from "./BackgroundSVG";
+import BackgroundImage from "./BackgroundImage";
 
 const Item = ({ item, onPress, onLongPress, backgroundColor, textColor}) => {
     return !item.done ?
         <TouchableOpacity onLongPress={onLongPress} onPress={onPress} style={[styles.roundButton1, backgroundColor]}>
 
-                <BackgroundSVG uri={item.logoUri} xml={item.logoXML}/>
+                <BackgroundImage item={item}/>
                 <Text style={[styles.buttonTextPosition, styles.amount, textColor]} adjustsFontSizeToFit numberOfLines={1}>{item.amount}</Text>
                 <View style={styles.buttonUnitsTextPosition}>
                     <Text style={[styles.unitsOfTask, textColor]} adjustsFontSizeToFit numberOfLines={1}>{item.task}</Text>
@@ -18,7 +18,7 @@ const Item = ({ item, onPress, onLongPress, backgroundColor, textColor}) => {
             <TouchableOpacity onPress={onPress}>
                 <FadeOutView style={styles.roundButton2}>
 
-            <BackgroundSVG uri={item.logoUri} xml={item.logoXML}/>
+            <BackgroundImage item={item}/>
             <Text style={[styles.buttonTextPosition, styles.amount, textColor]} adjustsFontSizeToFit numberOfLines={1}>{item.amount}</Text>
             <View style={styles.buttonUnitsTextPosition}>
                 <Text style={[styles.unitsOfTask, textColor]} adjustsFontSizeToFit numberOfLines={1}>{item.task}</Text>

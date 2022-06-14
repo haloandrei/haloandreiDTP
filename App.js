@@ -11,7 +11,7 @@ import {
   Text,
   useColorScheme,
   View,
-  TextInput, Button, Alert, BackHandler,
+  TextInput, Button, Alert, BackHandler, PermissionsAndroid, Image,
 } from 'react-native';
 
 import TaskListScreen from "./screens/TaskListScreen";
@@ -24,6 +24,7 @@ import color from "./constants/color";
 import SideMenu from "./components/Main/SideMenu";
 import Colors from "./constants/color";
 import ScheduleTasksScreen from "./screens/ScheduleTasksScreen";
+import EditTasksScreen from "./screens/EditTasksScreen";
 const CIRCLE = Math.PI * 2;
 
 const wait = (timeout) => {
@@ -33,6 +34,7 @@ const wait = (timeout) => {
 const App: () => Node = () => {
   const [screenState,setScreenState] = useState("taskList");
   const [scheduler, setScheduler] = useState(false);
+  const [edit,setEdit] = useState(false);
   const [refreshing, setRefreshing] = React.useState(false);
   const [showMenuS, setShowMenuS] = useState(<></>);
   const [date,setDate] = useState(null);
@@ -41,6 +43,32 @@ const App: () => Node = () => {
   const DB = useRef(new DataBase());
   var progressTotal = useRef(0);
   var progressDone = useRef(0);
+
+  const requestStoragePermission = async () => {
+
+    if (Platform.OS !== "android") return true
+
+    const pm1 = await PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE);
+    const pm2 = await PermissionsAndroid.check(PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE);
+
+    if (pm1 && pm2) return true
+
+    const userResponse = await PermissionsAndroid.requestMultiple([
+      PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE,
+      PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE
+    ]);
+
+    if (userResponse['android.permission.READ_EXTERNAL_STORAGE'] === 'granted' &&
+        userResponse['android.permission.WRITE_EXTERNAL_STORAGE'] === 'granted') {
+      return true
+    } else {
+      return false
+    }
+  }
+
+  useEffect(() => {
+    requestStoragePermission();
+  }, [])
 
   const computeProgress = () => {
     progressTotal.current = 0;
@@ -68,9 +96,14 @@ const App: () => Node = () => {
     setScheduler(true);
   }
 
+  const editTasksScreenHandler = () => {
+    setEdit(true);
+  }
+
   const showMenu = () => {
     setShowMenuS(<View style={styles.sideMenu}>
       <Button style={styles.button} title={"Schedule Tasks"} onPress={scheduleTasksScreenHandler} color={Colors.neutral}/>
+      <Button style={styles.button} title={"Test Task Render"} onPress={editTasksScreenHandler} color={Colors.neutral}/>
       <Button style={styles.button} title={"Erase Tasks"} onPress={() => {setTasks([]); DB.current.setTasks.bind(this,[]);}} color={Colors.fail}/>
     </View> );
   }
@@ -105,7 +138,6 @@ const App: () => Node = () => {
   let content = <TaskListScreen tasks={tasks} setTasks={setTasks} DB={DB.current} refreshed={refreshing} addButton={true} setProgress={setProgress} onRefresh={onRefresh} addTaskHandler={addTaskHandler}/>;
 
   let display = <></>;
-  let sideMenuTag = <></>;
   if (screenState === "taskList") content = <TaskListScreen tasks={tasks} setTasks={setTasks} DB={DB.current} refreshed={refreshing} addButton={true} setProgress={setProgress} onRefresh={onRefresh} addTaskHandler={addTaskHandler}/>;
   if (screenState === "addTaskScreen") content = <AddTaskScreen tasks={tasks} setTasks={setTasks} DB={DB.current} doneHandler={doneHandler}/>;
 
@@ -136,14 +168,13 @@ const App: () => Node = () => {
 
   </View>
     {showMenuS}
-    <SideMenu showMenu={showMenu} closeMenu={closeMenu} >
-    </SideMenu>
+    <SideMenu showMenu={showMenu} closeMenu={closeMenu}/>
   </>;
-  if (scheduler === false) display = mainMenuScreen;
-  else display = <ScheduleTasksScreen closeScheduler={setScheduler} tasks={tasks} setTasks={setTasks} DB={DB.current}/>
+  if (scheduler === false || edit=== false) display = mainMenuScreen;
+  else if (scheduler === true) display = <ScheduleTasksScreen closeScheduler={setScheduler} tasks={tasks} setTasks={setTasks} DB={DB.current}/>
+  else if (edit === true) display = <EditTasksScreen closeScheduler={setEdit} tasks={tasks} setTasks={setTasks} DB={DB.current}/>
 
   return ( <SafeAreaView style={styles.container}>
-
         {display}
 
       </SafeAreaView>
